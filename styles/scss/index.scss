@@ -1,0 +1,141 @@
+@import 'variables', 'base';
+
+.container{
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  // @media #{$mf_widthMax}{
+  //   padding: 0;
+  // }
+}
+
+img{
+  max-width: 100%;
+}
+
+
+//navigation
+.navbar{
+  display: flex;
+  position: absolute;
+  top: 0;
+  background-color: $black;
+  align-items: center;
+  width: 100%;
+
+  @media #{$mf_tablet}{
+    background-color: transparent;
+  }
+
+
+  &-nav{
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+      .nav-item{
+      margin: 0 20px;
+
+
+      .nav-link{
+        font-family: $fontTitle;
+        color: $white;
+      }
+    }
+  }
+}
+
+.section{
+  &--banner {
+    z-index: -1;
+
+    .btn {
+      .btn--red{
+        margin-top: -325px;
+      }
+    }
+  }
+
+  &--article{
+
+    .content{
+      @media #{$mf_tablet}{
+        // display: flex;
+        // flex-flow: row nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      &__img{
+        position: relative;
+        
+        img{
+          object-fit: cover;
+          object-position: center;
+          text-align: center;
+          width: 100%;
+          // max-height: 360px;
+        }
+  
+        @media #{$mf_tablet}{
+          // width: 440px;
+          // max-height: 360px;
+          order: 2;
+
+          &::after{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            content: "";
+            display: block;
+            background-color: $white;
+            width: 25px;
+            height: 100%;
+          }
+        }
+
+        // @media #{$mf_laptop}{
+        //   width: 650px;
+        //   max-height: 440px;
+        // }
+      }
+
+      &__inner{
+        @media #{$mf_tablet}{
+          // width: calc(#{"100% - 440px"});
+          order: 1;
+        }
+        @media #{$mf_laptop}{
+          // width: calc(#{"100% - 650px"});
+          // max-height: 440px;
+        }
+      }
+    }
+  }
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $red;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: color .2s ease-in-out;
+
+}
