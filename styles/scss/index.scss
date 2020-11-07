@@ -31,7 +31,9 @@ img {
   width: 100%;
   z-index: 100;
 
-  
+  &-collapse{
+    background-color: $red;
+  }
 
   @media #{$mf_tablet} {
     background-color: transparent;
@@ -149,6 +151,18 @@ img {
             width: 25px;
             height: 100%;
           }
+
+          &--flip::after {
+            position: absolute;
+            content: "";
+            transform: translateX(-50%);
+            top: 50%;
+            left: 215px;
+            display: block;
+            background-color: $white;
+            width: 100%;
+            height: 25px;
+          }
         }
       }
 
@@ -165,9 +179,30 @@ img {
       }
     }
   }
-  &--slider {
-    // display: block;
-    // flex-flow: column wrap;
+  &--slider{
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  &--training {
+    @media #{$mf_tablet} {
+      order: 2;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateX(-50%);
+        content: "";
+        display: block;
+        background-color: $white;
+        width: 100%;
+        height: 25px;
+      }
+    }
+  }
+  &--gallery {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
   .scale {
     transition: 1s; /* Время эффекта */

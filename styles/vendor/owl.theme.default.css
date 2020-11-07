@@ -62,5 +62,12 @@
 
 .owl-carousel .owl-stage-outer {
   overflow: visible;
+  
 } 
+
+.owl-carousel .scale-text {
+  visibility: hidden;
+}
+
+
 

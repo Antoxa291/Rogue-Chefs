@@ -68,6 +68,8 @@ img {
   align-items: center;
   width: 100%;
   z-index: 100; }
+  .navbar-collapse {
+    background-color: #ff1a2c; }
   @media only screen and (min-width: 768px) {
     .navbar {
       background-color: transparent; } }
@@ -143,10 +145,42 @@ img {
           display: block;
           background-color: #ffffff;
           width: 25px;
-          height: 100%; } }
+          height: 100%; }
+        .section--article .content__img--flip::after {
+          position: absolute;
+          content: "";
+          transform: translateX(-50%);
+          top: 50%;
+          left: 215px;
+          display: block;
+          background-color: #ffffff;
+          width: 100%;
+          height: 25px; } }
   @media only screen and (min-width: 768px) {
     .section--article .content__inner {
       order: 1; } }
+
+.section--slider {
+  padding-top: 70px;
+  padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px) {
+  .section--training {
+    order: 2; }
+    .section--training::after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateX(-50%);
+      content: "";
+      display: block;
+      background-color: #ffffff;
+      width: 100%;
+      height: 25px; } }
+
+.section--gallery {
+  padding-top: 70px;
+  padding-bottom: 70px; }
 
 .section .scale {
   transition: 1s;
