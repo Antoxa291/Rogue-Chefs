@@ -1,0 +1,34 @@
+/* MEDIA QUERIES */
+//mobile first
+$mf_mobileM: "only screen and (min-width: 375px)";
+$mf_mobileL: "only screen and (min-width: 425px)";
+$mf_mobileXL: "only screen and (min-width: 560px)";
+$mf_tablet: "only screen and (min-width: 768px)";
+$mf_tabletL: "only screen and (min-width: 992px)";
+$mf_laptop: "only screen and (min-width: 1024px)";
+$mf_widthMax: "only screen and (min-width: 1170px)";
+
+/* COLORS */
+$gray: #333333;
+$black: #22191a;
+$darkBlack: #191919;
+$red: #ff1a2c;
+$white: #ffffff;
+
+/* FONTS */
+$fontOpenSans: 'Open Sans',
+sans-serif;
+$fontFjallaOne: 'Fjalla One',
+sans-serif;
+$fontGreatVibes: 'Great Vibes',
+cursive;
+
+
+/* BASE */
+$fontText: $fontOpenSans;
+$fontTitle: $fontFjallaOne;
+$fontSubTitle: $fontGreatVibes;
+
+$baseTextColor: $black;
+$baseTitleColor: $white;
+$baseSubTitleColor: $red;
